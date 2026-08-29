@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Real or Fake Detector - Portal</title>
+</head>
+<body>
+
+    <header>
+        <h1>Content Authenticity Portal</h1>
+        <p>A web tool to authenticate news, claims, and media using backend detection models.</p>
+        <hr>
+    </header>
+
+    <main>
+        <!-- Section 1: User Login -->
+        <section id="login-section">
+            <h2>Account Login</h2>
+            <form onsubmit="handleLogin(event)">
+                <label for="username">Username / Email:</label><br>
+                <input type="text" id="username" name="username" placeholder="Enter your email or username" required>
+                <br><br>
+
+                <label for="password">Password:</label><br>
+                <input type="password" id="password" name="password" placeholder="Enter your password" required>
+                <br><br>
+
+                <button type="submit">Log In</button>
+            </form>
+            <p id="loginStatus"></p>
+        </section>
+
+        <hr>
+
+        <!-- Section 2: Detector Tool -->
+        <section id="detector-section">
+            <h2>Content Authenticity Detector</h2>
+            <p>Paste the statement, headline, or article text below:</p>
+
+            <textarea id="userInput" rows="8" cols="65" placeholder="Paste your text or article here..."></textarea>
+            <br><br>
+
+            <button type="button" onclick="checkAuthenticity()">Check Authenticity</button>
+
+            <h3>Detection Status & Results</h3>
+            <p id="resultStatus"><em>Waiting for input...</em></p>
+            <p id="resultDetails"></p>
+        </section>
+
+        <hr>
+
+        <!-- Section 3: About -->
+        <section id="about-section">
+            <h2>About This Project</h2>
+            <p>This system integrates user authentication and automated machine learning analysis to verify content reliability and detect fabricated data.</p>
+        </section>
+    </main>
+
+    <footer>
+        <hr>
+        <p><small>&copy; 2026 Authenticity Portal. Hosted via GitHub Pages.</small></p>
+    </footer>
+
+    <!-- Placeholder Scripts -->
+    <script>
+        // Placeholder for Login submission
+        function handleLogin(event) {
+            event.preventDefault(); // Prevents page reload
+            const username = document.getElementById("username").value.trim();
+            const loginStatus = document.getElementById("loginStatus");
+
+            alert("Login feature under construction! Authentication backend will be connected soon.");
+            loginStatus.innerHTML = "<strong>Status:</strong> Login API under development for user: <em>" + username + "</em>";
+        }
+
+        // Placeholder for Detection submission
+        function checkAuthenticity() {
+            const input = document.getElementById("userInput").value.trim();
+            const statusEl = document.getElementById("resultStatus");
+            const detailsEl = document.getElementById("resultDetails");
+
+            if (!input) {
+                alert("Please enter some text before analyzing.");
+                return;
+            }
+
+            alert("Detector under construction! The Python ML backend is currently being integrated.");
+            statusEl.innerHTML = "<strong>Status:</strong> Under Development";
+            detailsEl.innerHTML = "No operation performed. Python backend will be linked soon.";
+        }
+    </script>
+
+</body>
+</html>
